@@ -1,3 +1,4 @@
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -62,7 +63,7 @@ public class PlayerControler : MonoBehaviour
 
 
     #endregion
-
+    
     #region Input
 
     private void Move(InputAction.CallbackContext ctx)
@@ -72,14 +73,3 @@ public class PlayerControler : MonoBehaviour
     }
 
     #endregion
-
-
-    public int playerHealth = 100;
-
-    public void GetDamage(int dmg)
-    {
-        playerHealth -=100
-    }
-
-
-}
