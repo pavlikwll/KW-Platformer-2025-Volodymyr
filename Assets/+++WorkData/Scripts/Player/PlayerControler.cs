@@ -54,16 +54,16 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
 
             // 2) Дістаємо конкретні дії з мапи «Player».
             //    Тепер _moveAction знає, з яких клавіш/стика брати вхідні дані.
-            _moveAction    = _inputActions.Player.Move;
-            _jumpAction    = _inputActions.Player.Jump;
-            _sprintAction  = _inputActions.Player.Sprint;
-            _attackAction  = _inputActions.Player.Attack;
-            _lookAction    = _inputActions.Player.Look;
-            _interactAction= _inputActions.Player.Interact;
-            _crouchAction  = _inputActions.Player.Crouch;
-            _previousAction= _inputActions.Player.Previous;
-            _nextAction    = _inputActions.Player.Next;
-            _rollAction    = _inputActions.Player.Roll;
+            _moveAction = _inputActions.Player.Move;
+            _jumpAction = _inputActions.Player.Jump;
+            _sprintAction = _inputActions.Player.Sprint;
+            _attackAction = _inputActions.Player.Attack;
+            _lookAction = _inputActions.Player.Look;
+            _interactAction = _inputActions.Player.Interact;
+            _crouchAction = _inputActions.Player.Crouch;
+            _previousAction = _inputActions.Player.Previous;
+            _nextAction = _inputActions.Player.Next;
+            _rollAction = _inputActions.Player.Roll;
 
             // 3) Беремо посилання на Rigidbody2D на цьому ж об’єкті.
             //    Через нього будемо виставляти швидкість у фізиці.
@@ -81,7 +81,19 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
             _moveAction.performed += Move;
             _moveAction.canceled  += Move;
         }
+        
+        // FixedUpdate() викликається через рівні інтервали часу (за замовчуванням 0,02 с).
+        // Усе, що стосується фізики (Rigidbody2D), коректно робити саме тут.
+        
+        private void FixedUpdate()
+        {
+            // Беремо X з інпуту (-1..1), множимо на швидкість, отримуємо потрібну горизонтальну швидкість.
+            // По Y нічого не змінюємо — залишаємо поточну («гравітація/стрибок» працює як є).
+            rb.linearVelocity = new Vector2(_moveInput.x * walkingSpeed, rb.linearVelocity.y);
 
+            // ВАЖЛИВО: тут не має бути throw NotImplementedException(); — це штучний краш для заглушок.
+        }
+        
         private void OnDisable()
         {
             // Відписуємося від подій, інакше після вимкнення об’єкта підписки «висять у повітрі».
@@ -90,17 +102,6 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
 
             // Вимикаємо Input-систему для охайности.
             _inputActions.Disable();
-        }
-
-        // FixedUpdate() викликається через рівні інтервали часу (за замовчуванням 0,02 с).
-        // Усе, що стосується фізики (Rigidbody2D), коректно робити саме тут.
-        private void FixedUpdate()
-        {
-            // Беремо X з інпуту (-1..1), множимо на швидкість, отримуємо потрібну горизонтальну швидкість.
-            // По Y нічого не змінюємо — залишаємо поточну («гравітація/стрибок» працює як є).
-            rb.linearVelocity = new Vector2(_moveInput.x * walkingSpeed, rb.linearVelocity.y);
-
-            // ВАЖЛИВО: тут не має бути throw NotImplementedException(); — це штучний краш для заглушок.
         }
 
         #region Input
