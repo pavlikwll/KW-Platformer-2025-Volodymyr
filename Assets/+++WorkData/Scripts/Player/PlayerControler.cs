@@ -1,116 +1,116 @@
-// Підключаємо основну Unity бібліотеку, 
-// щоб мати доступ до базових класів, як MonoBehaviour, GameObject, Transform тощо.
-using UnityEngine;
+// ⬇ Підключаємо базові простори назв .NET і Unity.
+using System;                       // Дає змогу працювати зі стандартними типами .NET і винятками.
+using UnityEngine;                  // Головна бібліотека Unity: MonoBehaviour, GameObject, Transform, тощо.
+using UnityEngine.InputSystem;      // Нова Input System (клавіатура/миша/ґеймпад). Без неї не працюватимуть InputAction-и.
 
-// Підключаємо нову Input System — це сучасна система для обробки керування
-// (клавіатура, мишка, геймпад, тощо). Без цього не працюватимуть InputAction-и.
-using UnityEngine.InputSystem;
-
-// Оголошення класу PlayerController, який є компонентом Unity (MonoBehaviour).
-// Його можна прикріпити до будь-якого GameObject у сцені, наприклад — до гравця.
-public class PlayerController : MonoBehaviour
+namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логічна папка для коду (уникнення конфліктів імен).
 {
-    // 🔹 Цей блок змінних видно в Unity Inspector — для налаштування вручну.
-    #region Inspector Variables
-
-    // [SerializeField] робить приватну змінну доступною в інспекторі Unity.
-    // walkingSpeed — швидкість, з якою гравець ходить.
-    [SerializeField]
-    private float walkingSpeed;
-
-    #endregion
-
-    // 🔹 Приватні змінні — для внутрішньої логіки контролера.
-    // Їх не видно у Unity, але вони зберігають важливі посилання та дані.
-    #region Private Variables
-
-    // Посилання на InputSystem_Actions — це клас, який генерується автоматично
-    // на основі твого Input Actions Asset (файлу з усіма кнопками і командами).
-    private InputSystem_Actions _inputActions;
-
-    // Окремі InputAction-и для кожної дії гравця.
-    // Вони відповідають за рух, стрибок, атаку тощо.
-    private InputAction _moveAction;
-    private InputAction _jumpAction;
-    private InputAction _sprintAction;
-    private InputAction _attackAction;
-    private InputAction _lookAction;
-    private InputAction _interactAction;
-    private InputAction _crouchAction;
-    private InputAction _previousAction;
-    private InputAction _nextAction;
-    private InputAction _rollAction;
-
-    // Vector2 зберігає введення руху (ось X і Y).
-    // Наприклад: (1,0) = рух праворуч, (-1,0) = ліворуч.
-    private Vector2 _moveInput;
-
-    #endregion
-
-    // 🔹 Події життєвого циклу Unity (Unity Event Functions)
-    // Це спеціальні методи, які викликаються автоматично.
-    #region Unity Event Functions
-
-    // Awake() викликається найпершим, коли створюється об’єкт.
-    // Тут ініціалізуємо InputSystem і підключаємо дії з Input Asset.
-    private void Awake()
+    // Компонент Unity. Його можна прикріпити до об’єкта гравця у сцені.
+    // Атрибут гарантує, що на об’єкті є Rigidbody2D (інакше Unity його підставить).
+    [RequireComponent(typeof(Rigidbody2D))]
+    public class PlayerController : MonoBehaviour
     {
-        // Створюємо новий екземпляр класу InputSystem_Actions.
-        _inputActions = new InputSystem_Actions();
+        #region Inspector Variables
+        // ⬇ Параметри, які видно в Inspector. Їх зручно крутити без перекомпіляції коду.
 
-        // Прив’язуємо всі дії з розділу “Player” до локальних змінних.
-        // Це дозволяє легко керувати кожною кнопкою окремо.
-        _moveAction = _inputActions.Player.Move;
-        _jumpAction = _inputActions.Player.Jump;
-        _sprintAction = _inputActions.Player.Sprint;
-        _attackAction = _inputActions.Player.Attack;
-        _lookAction = _inputActions.Player.Look;
-        _interactAction = _inputActions.Player.Interact;
-        _crouchAction = _inputActions.Player.Crouch;
-        _previousAction = _inputActions.Player.Previous;
-        _nextAction = _inputActions.Player.Next;
-        _rollAction = _inputActions.Player.Roll;
+        [SerializeField] private float walkingSpeed = 5f;  // Базова швидкість ходьби (одиниці/сек у фізичному сенсі).
+        [SerializeField] private float runningSpeed = 10f; // Запасом для бігу. Поки не використовуємо, але залишимо для майбутнього.
+        #endregion
+
+        #region Private Variables
+        // ⬇ Робочі змінні — не видно в Inspector. Обслуговують логіку контролера.
+
+        // Це «обгортка», яку генерує нова Input System з твого .inputactions-файла.
+        // Вона містить мапінг усіх дій (Move/Jump/...).
+        private InputSystem_Actions _inputActions;
+
+        // Окремі посилання на конкретні дії вводу з мапи «Player».
+        private InputAction _moveAction;
+        private InputAction _jumpAction;
+        private InputAction _sprintAction;
+        private InputAction _attackAction;
+        private InputAction _lookAction;
+        private InputAction _interactAction;
+        private InputAction _crouchAction;
+        private InputAction _previousAction;
+        private InputAction _nextAction;
+        private InputAction _rollAction;
+
+        // Тут зберігаємо останній зчитаний напрям руху (X,Y) із Input System.
+        // Для платформера нас цікавить переважно X: -1 (ліво), 0 (стоп), 1 (право).
+        private Vector2 _moveInput;
+
+        // Посилання на фізичне тіло 2D. Через нього ми «рухаємо» об’єкт, змінюючи швидкість.
+        private Rigidbody2D rb;
+        #endregion
+
+        // Життєвий цикл Unity: послідовність подій від створення компонента до його вимкнення.
+        // Awake() -> OnEnable() -> (Update/FixedUpdate кожен кадр) -> OnDisable() -> OnDestroy()
+
+        private void Awake()
+        {
+            // 1) Створюємо екземпляр згенерованого класу дій.
+            _inputActions = new InputSystem_Actions();
+
+            // 2) Дістаємо конкретні дії з мапи «Player».
+            //    Тепер _moveAction знає, з яких клавіш/стика брати вхідні дані.
+            _moveAction    = _inputActions.Player.Move;
+            _jumpAction    = _inputActions.Player.Jump;
+            _sprintAction  = _inputActions.Player.Sprint;
+            _attackAction  = _inputActions.Player.Attack;
+            _lookAction    = _inputActions.Player.Look;
+            _interactAction= _inputActions.Player.Interact;
+            _crouchAction  = _inputActions.Player.Crouch;
+            _previousAction= _inputActions.Player.Previous;
+            _nextAction    = _inputActions.Player.Next;
+            _rollAction    = _inputActions.Player.Roll;
+
+            // 3) Беремо посилання на Rigidbody2D на цьому ж об’єкті.
+            //    Через нього будемо виставляти швидкість у фізиці.
+            rb = GetComponent<Rigidbody2D>();
+        }
+
+        private void OnEnable()
+        {
+            // Активуємо всю Input-систему для цього контролера.
+            _inputActions.Enable();
+
+            // Підписуємося на події руху:
+            // performed — коли є активний вхід (тиснемо A/D або рухаємо стік),
+            // canceled  — коли вхід зник (клавішу відпустили) → отримаємо (0,0).
+            _moveAction.performed += Move;
+            _moveAction.canceled  += Move;
+        }
+
+        private void OnDisable()
+        {
+            // Відписуємося від подій, інакше після вимкнення об’єкта підписки «висять у повітрі».
+            _moveAction.performed -= Move;
+            _moveAction.canceled  -= Move;
+
+            // Вимикаємо Input-систему для охайности.
+            _inputActions.Disable();
+        }
+
+        // FixedUpdate() викликається через рівні інтервали часу (за замовчуванням 0,02 с).
+        // Усе, що стосується фізики (Rigidbody2D), коректно робити саме тут.
+        private void FixedUpdate()
+        {
+            // Беремо X з інпуту (-1..1), множимо на швидкість, отримуємо потрібну горизонтальну швидкість.
+            // По Y нічого не змінюємо — залишаємо поточну («гравітація/стрибок» працює як є).
+            rb.linearVelocity = new Vector2(_moveInput.x * walkingSpeed, rb.linearVelocity.y);
+
+            // ВАЖЛИВО: тут не має бути throw NotImplementedException(); — це штучний краш для заглушок.
+        }
+
+        #region Input
+        // Колбек для подій _moveAction. Викликається і на натисканні, і на відпусканні.
+        private void Move(InputAction.CallbackContext ctx)
+        {
+            // Читаємо значення як Vector2. Для 2D платформера це зазвичай:
+            // A/D або ←/→ → дають (-1,0) / (1,0). Джойстик — будь-яке число між ними.
+            _moveInput = ctx.ReadValue<Vector2>();
+        }
+        #endregion
     }
-
-    // OnEnable() викликається, коли об’єкт активується (enabled = true).
-    // Тут ми “вмикаємо” систему вводу та підписуємося на події кнопок.
-    private void OnEnable()
-    {
-        // Активуємо весь набір InputAction-ів.
-        _inputActions.Enable();
-
-        // Підписуємо метод Move() на події: 
-        // - performed (коли кнопка натиснута або рух почато)
-        // - canceled (коли рух припинено).
-        _moveAction.performed += Move;
-        _moveAction.canceled += Move;
-    }
-
-    // OnDisable() викликається, коли об’єкт деактивується (disabled або знищується).
-    // Тут ми вимикаємо InputSystem і знімаємо підписки, щоб уникнути помилок.
-    private void OnDisable()
-    {
-        // Вимикаємо Input System, щоб вона не слухала події.
-        _inputActions.Disable();
-
-        // Відписуємо Move() від подій, щоб не залишилося “зайвих слухачів”.
-        _moveAction.performed -= Move;
-        _moveAction.canceled -= Move;
-    }
-
-    #endregion
-
-    // 🔹 Вхідні події (обробка натискань і рухів)
-    #region Input
-
-    // Метод Move() викликається щоразу, коли користувач рухаєсь або відпускає кнопку руху.
-    // ctx — контекст події, який містить усю інформацію про введення.
-    private void Move(InputAction.CallbackContext ctx)
-    {
-        // Зчитуємо напрям руху у вигляді Vector2 (ось X і Y)
-        // і зберігаємо в _moveInput для подальшого використання в Update().
-        _moveInput = ctx.ReadValue<Vector2>();
-    }
-
-    #endregion
 }
