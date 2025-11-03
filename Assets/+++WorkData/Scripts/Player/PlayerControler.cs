@@ -1,5 +1,6 @@
 // ⬇ Підключаємо базові простори назв .NET і Unity.
-using System;                       // Дає змогу працювати зі стандартними типами .NET і винятками.
+using System;
+using Unity.Collections; // Дає змогу працювати зі стандартними типами .NET і винятками.
 using UnityEngine;                  // Головна бібліотека Unity: MonoBehaviour, GameObject, Transform, тощо.
 using UnityEngine.InputSystem;      // Нова Input System (клавіатура/миша/ґеймпад). Без неї не працюватимуть InputAction-и.
 
@@ -19,7 +20,7 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
 
         #region Private Variables
         // ⬇ Робочі змінні — не видно в Inspector. Обслуговують логіку контролера.
-
+        
         // Це «обгортка», яку генерує нова Input System з твого .inputactions-файла.
         // Вона містить мапінг усіх дій (Move/Jump/...).
         private InputSystem_Actions _inputActions;
@@ -42,6 +43,7 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
 
         // Посилання на фізичне тіло 2D. Через нього ми «рухаємо» об’єкт, змінюючи швидкість.
         private Rigidbody2D rb;
+        private SpriteRenderer sr;
         #endregion
 
         // Життєвий цикл Unity: послідовність подій від створення компонента до його вимкнення.
@@ -68,6 +70,10 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
             // 3) Беремо посилання на Rigidbody2D на цьому ж об’єкті.
             //    Через нього будемо виставляти швидкість у фізиці.
             rb = GetComponent<Rigidbody2D>();
+            sr = GetComponent<SpriteRenderer>();
+
+            sr.flipX = true;
+
         }
 
         private void OnEnable()
@@ -92,6 +98,8 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
             rb.linearVelocity = new Vector2(_moveInput.x * walkingSpeed, rb.linearVelocity.y);
 
             // ВАЖЛИВО: тут не має бути throw NotImplementedException(); — це штучний краш для заглушок.
+
+            rb.linearVelocityX = _moveInput.x * walkingSpeed;
         }
         
         private void OnDisable()
@@ -111,6 +119,12 @@ namespace ___WorkData.Scripts.Player   // ⬅ Простір назв: логі�
             // Читаємо значення як Vector2. Для 2D платформера це зазвичай:
             // A/D або ←/→ → дають (-1,0) / (1,0). Джойстик — будь-яке число між ними.
             _moveInput = ctx.ReadValue<Vector2>();
+
+            if (_moveInput.x > 0)
+            {
+                
+            }
+            
         }
         #endregion
     }
