@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -117,49 +117,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_0
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 660
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      physicsShape:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2afda6aba2f5af0b0800000000000000
-      internalID: -5694134141735739486
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GC_14_PavlikVolodymyr_Aufgabe3_1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 660
+        x: 336
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline:
@@ -184,12 +180,12 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_2
       rect:
         serializedVersion: 2
-        x: 188
-        y: 660
+        x: 400
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline:
@@ -211,45 +207,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_3
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 660
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      physicsShape:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02a3d796ff87c47e0800000000000000
-      internalID: -1779914714336380384
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GC_14_PavlikVolodymyr_Aufgabe3_4
       rect:
         serializedVersion: 2
-        x: 316
-        y: 660
+        x: 528
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline:
@@ -274,12 +240,12 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_5
       rect:
         serializedVersion: 2
-        x: 380
-        y: 660
+        x: 592
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline:
@@ -301,30 +267,66 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_6
+      name: GC_14_PavlikVolodymyr_Aufgabe3_0
       rect:
         serializedVersion: 2
-        x: 444
-        y: 660
+        x: 272
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      physicsShape:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      tessellationDetail: -1
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
       bones: []
-      spriteID: 5275a67dbfd9b1890800000000000000
+      spriteID: a1dca7fcd29c9a3469feb56f22f3984c
+      internalID: -5694134141735739486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GC_14_PavlikVolodymyr_Aufgabe3_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 661
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad1ba4d19bdca44cb8af9e8da1cb10f
+      internalID: -1779914714336380384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GC_14_PavlikVolodymyr_Aufgabe3_6
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 661
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b220cf6ad9053d240b9e08cc461fce69
       internalID: -7486216250596894939
       vertices: []
       indices: 
@@ -334,27 +336,19 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_7
       rect:
         serializedVersion: 2
-        x: 508
-        y: 660
+        x: 720
+        y: 661
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      physicsShape:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      tessellationDetail: -1
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
       bones: []
-      spriteID: 6072c685be860e580800000000000000
+      spriteID: 8d9b55417d9325046809f56fc8ecc406
       internalID: -8799918311871863034
       vertices: []
       indices: 
@@ -364,20 +358,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_8
       rect:
         serializedVersion: 2
-        x: 572
-        y: 660
+        x: 272
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a6d747371fc3488cb4b7605a96bb6bb
-      internalID: 2070038950
+      spriteID: 8e457b562b78957429492692457145f6
+      internalID: -939059596
       vertices: []
       indices: 
       edges: []
@@ -386,20 +380,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_9
       rect:
         serializedVersion: 2
-        x: 636
-        y: 660
+        x: 336
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d51bb1ca66474a1290da8c06417a973
-      internalID: 121754319
+      spriteID: 861106e6878d34e4ebe11808986ced62
+      internalID: -1237849089
       vertices: []
       indices: 
       edges: []
@@ -408,20 +402,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_10
       rect:
         serializedVersion: 2
-        x: 700
-        y: 660
+        x: 400
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bbcde770dbc8459fbe6470c2019f81b
-      internalID: 802526743
+      spriteID: 1997d7cca2da3254190d94acc0cb0389
+      internalID: -1340381730
       vertices: []
       indices: 
       edges: []
@@ -430,20 +424,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_11
       rect:
         serializedVersion: 2
-        x: 764
-        y: 660
+        x: 464
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c22c3ad1722d4f1cac7d09f857f752f
-      internalID: -772834235
+      spriteID: efe0369eb850267469982a81bc03eecd
+      internalID: 1547620440
       vertices: []
       indices: 
       edges: []
@@ -452,20 +446,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_12
       rect:
         serializedVersion: 2
-        x: 828
-        y: 660
+        x: 528
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 85c1026a698ac4adeb1ca2683857a603
-      internalID: 1086932235
+      spriteID: 60da53b820f6cfd4995b695d3d6b2dfc
+      internalID: -1245258542
       vertices: []
       indices: 
       edges: []
@@ -474,20 +468,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_13
       rect:
         serializedVersion: 2
-        x: 892
-        y: 660
+        x: 592
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fafd5e5a66b5423fb659f06c8315164
-      internalID: -1006568123
+      spriteID: 9f3e8e7813111384f8282b1b28f8361e
+      internalID: 1493313293
       vertices: []
       indices: 
       edges: []
@@ -496,20 +490,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_14
       rect:
         serializedVersion: 2
-        x: 956
-        y: 660
+        x: 656
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ead5f2502a146b6a5ab0a35b2acfd6
-      internalID: 32279713
+      spriteID: 00100bbef3faaeb4c95666f8c8259384
+      internalID: 917830767
       vertices: []
       indices: 
       edges: []
@@ -518,20 +512,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_15
       rect:
         serializedVersion: 2
-        x: 60
-        y: 596
+        x: 720
+        y: 597
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ff5affb08084411e85374ef964dff1d
-      internalID: -681277151
+      spriteID: b71721be1d6dd654f9e1ae02f47df9e1
+      internalID: -310984262
       vertices: []
       indices: 
       edges: []
@@ -540,20 +534,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_16
       rect:
         serializedVersion: 2
-        x: 124
-        y: 596
+        x: 272
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 365bb46e7bbc24996b2dab0190f36160
-      internalID: 1170819847
+      spriteID: ec9dbe557cf6c284db92f2f6e85218d0
+      internalID: 1471566926
       vertices: []
       indices: 
       edges: []
@@ -562,20 +556,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_17
       rect:
         serializedVersion: 2
-        x: 188
-        y: 596
+        x: 336
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f2e44ea0fb9443049e11c8347804b52
-      internalID: 1240448471
+      spriteID: 737adc75133ce3f4c946030e6f0a7497
+      internalID: -760333024
       vertices: []
       indices: 
       edges: []
@@ -584,20 +578,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_18
       rect:
         serializedVersion: 2
-        x: 252
-        y: 596
+        x: 400
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fae88bf9b151846619d303fee8fd7dd4
-      internalID: 905380091
+      spriteID: 7dfcb78fd91e554459ae70c8bedccc63
+      internalID: 904327556
       vertices: []
       indices: 
       edges: []
@@ -606,20 +600,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_19
       rect:
         serializedVersion: 2
-        x: 316
-        y: 596
+        x: 464
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54723275d2fd842b1b189c7491d7e4b2
-      internalID: -921002064
+      spriteID: 56a6910a01675694186e579e10c896e6
+      internalID: -1508409651
       vertices: []
       indices: 
       edges: []
@@ -628,20 +622,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_20
       rect:
         serializedVersion: 2
-        x: 380
-        y: 596
+        x: 528
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 713e38fd7abbe470281e3dfa61c65846
-      internalID: -618231664
+      spriteID: 563a0772c3c08d84c9b404c0bbd6bc86
+      internalID: 496824730
       vertices: []
       indices: 
       edges: []
@@ -650,20 +644,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_21
       rect:
         serializedVersion: 2
-        x: 444
-        y: 596
+        x: 592
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc0a21fc41add47b1a8424830d7d7633
-      internalID: 187607333
+      spriteID: eb09c89b0f720f740b11fcc881600bed
+      internalID: -1341026802
       vertices: []
       indices: 
       edges: []
@@ -672,20 +666,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_22
       rect:
         serializedVersion: 2
-        x: 508
-        y: 596
+        x: 656
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 494fdcff6c1c949fca1e7f20d4badb6f
-      internalID: 658656051
+      spriteID: 036e9c3a246daa44d881b9428844254b
+      internalID: 24202579
       vertices: []
       indices: 
       edges: []
@@ -694,20 +688,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_23
       rect:
         serializedVersion: 2
-        x: 572
-        y: 596
+        x: 720
+        y: 533
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c13694dcdbf949959dddd1038f60455
-      internalID: -2050171349
+      spriteID: 5ba7ec77e9213ad4cb4bb2067b3d0abd
+      internalID: 1070376164
       vertices: []
       indices: 
       edges: []
@@ -716,20 +710,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_24
       rect:
         serializedVersion: 2
-        x: 636
-        y: 596
+        x: 272
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7d247547754a44659c3d64d9fa248ec
-      internalID: -79460066
+      spriteID: f67498559f4343142a7f22f5c09b8e56
+      internalID: 723316732
       vertices: []
       indices: 
       edges: []
@@ -738,20 +732,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_25
       rect:
         serializedVersion: 2
-        x: 700
-        y: 596
+        x: 336
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15eaa2bbb08ee425aa196ffc9e948658
-      internalID: -1384839347
+      spriteID: 6eca0cc90e97fca4ab7da481bb22eb8c
+      internalID: 477705575
       vertices: []
       indices: 
       edges: []
@@ -760,20 +754,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_26
       rect:
         serializedVersion: 2
-        x: 764
-        y: 596
+        x: 400
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fdb1c75e2db144a884fa371e34822b5
-      internalID: 328790920
+      spriteID: 85e62bafb839bbe48ae97c41fafceb06
+      internalID: 105330780
       vertices: []
       indices: 
       edges: []
@@ -782,20 +776,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_27
       rect:
         serializedVersion: 2
-        x: 828
-        y: 596
+        x: 464
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81d30e315ebd84dc497119100e617715
-      internalID: 1982509865
+      spriteID: d73536133e91021478d7be5a1f80709d
+      internalID: 1117043840
       vertices: []
       indices: 
       edges: []
@@ -804,20 +798,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_28
       rect:
         serializedVersion: 2
-        x: 892
-        y: 596
+        x: 656
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 310e33f2396cc4ce988e2431a59cadb9
-      internalID: 389602723
+      spriteID: 621d29eba86ea1b409cc5edc1e1d2baa
+      internalID: 1396785493
       vertices: []
       indices: 
       edges: []
@@ -826,20 +820,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_29
       rect:
         serializedVersion: 2
-        x: 956
-        y: 596
+        x: 720
+        y: 469
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd66e4e46a5474e0ea0e32a15bd59130
-      internalID: -1691767942
+      spriteID: 428870ab094eb0e48b7cd9586426c68f
+      internalID: 109067546
       vertices: []
       indices: 
       edges: []
@@ -848,20 +842,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_30
       rect:
         serializedVersion: 2
-        x: 60
-        y: 532
+        x: 272
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1910e90cc7e3640dbb067a217992105c
-      internalID: 1859361673
+      spriteID: 60061a0b0058b864f9e054364a6c1831
+      internalID: -1178496399
       vertices: []
       indices: 
       edges: []
@@ -870,20 +864,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_31
       rect:
         serializedVersion: 2
-        x: 124
-        y: 532
+        x: 336
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 066627fe4fdc549b0962408ea1fc0885
-      internalID: 394172062
+      spriteID: e329c3bbfe5b5324a99f3d0f6f07086e
+      internalID: -620425451
       vertices: []
       indices: 
       edges: []
@@ -892,20 +886,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_32
       rect:
         serializedVersion: 2
-        x: 188
-        y: 532
+        x: 400
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 697d85a781fe448fab4a8818b466b347
-      internalID: -1317977937
+      spriteID: 24dcaeb0fe445994cbc05bac993bafa1
+      internalID: -440766288
       vertices: []
       indices: 
       edges: []
@@ -914,20 +908,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_33
       rect:
         serializedVersion: 2
-        x: 252
-        y: 532
+        x: 464
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 562794a2eac6643fca2a50c2cfd2a8f5
-      internalID: -84616097
+      spriteID: beb3ee4ffcf0c574a9d4841ff39ff450
+      internalID: 1494455373
       vertices: []
       indices: 
       edges: []
@@ -936,20 +930,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_34
       rect:
         serializedVersion: 2
-        x: 316
-        y: 532
+        x: 528
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fd82627161b441ed8782bd0a658a4b0
-      internalID: 448801223
+      spriteID: 2a1e2bd99a0d0db448174d49cce0ec4d
+      internalID: -1485178213
       vertices: []
       indices: 
       edges: []
@@ -958,20 +952,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_35
       rect:
         serializedVersion: 2
-        x: 380
-        y: 532
+        x: 592
+        y: 405
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36cf0a9a75712433081914d672462514
-      internalID: -2129660425
+      spriteID: 97985167f9176ea419d09fdad56ecedc
+      internalID: -800870694
       vertices: []
       indices: 
       edges: []
@@ -980,20 +974,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_36
       rect:
         serializedVersion: 2
-        x: 444
-        y: 532
+        x: 272
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54ab163f23da744d6be960c462ee6279
-      internalID: 868911243
+      spriteID: 6e6a34a7c397bdf44ae4c7b8894eba4b
+      internalID: -654870802
       vertices: []
       indices: 
       edges: []
@@ -1002,20 +996,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_37
       rect:
         serializedVersion: 2
-        x: 508
-        y: 532
+        x: 336
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93f96b23b12694f638e4c1c6f6c25615
-      internalID: 229068110
+      spriteID: 4d47cc5d65c9e7b4f84c3b087f6903bb
+      internalID: 474879958
       vertices: []
       indices: 
       edges: []
@@ -1024,20 +1018,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_38
       rect:
         serializedVersion: 2
-        x: 572
-        y: 532
+        x: 400
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0863d8a0c6954bd1bbc18749a9e16e2
-      internalID: -1412720342
+      spriteID: 0a2d818b0db38eb42a48ebcb13e0ca06
+      internalID: -616204965
       vertices: []
       indices: 
       edges: []
@@ -1046,20 +1040,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_39
       rect:
         serializedVersion: 2
-        x: 636
-        y: 532
+        x: 464
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 810c44d6a748e4285894aec546f8b2db
-      internalID: 138454199
+      spriteID: a96463de1d93f11478b12a840c8e3fd7
+      internalID: 8675168
       vertices: []
       indices: 
       edges: []
@@ -1068,20 +1062,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_40
       rect:
         serializedVersion: 2
-        x: 700
-        y: 532
+        x: 528
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d49f5715bd7af440c94421d64573adc6
-      internalID: 1624925386
+      spriteID: 7a3d7f697a8cbe64c8d3b758e2fbad98
+      internalID: 431132814
       vertices: []
       indices: 
       edges: []
@@ -1090,20 +1084,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_41
       rect:
         serializedVersion: 2
-        x: 764
-        y: 532
+        x: 592
+        y: 341
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5499b811d4df4dfabfade6e58851389
-      internalID: -1709769284
+      spriteID: 7d45a341b429e5542a25d83c33d26b04
+      internalID: -1706416087
       vertices: []
       indices: 
       edges: []
@@ -1112,20 +1106,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_42
       rect:
         serializedVersion: 2
-        x: 828
-        y: 532
+        x: 272
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1e3b99597b3a46bcb963efedd923f61
-      internalID: -1057911087
+      spriteID: 275f689f757642647bafee42a3628b70
+      internalID: 1809995852
       vertices: []
       indices: 
       edges: []
@@ -1134,20 +1128,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_43
       rect:
         serializedVersion: 2
-        x: 892
-        y: 532
+        x: 336
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d016207b12e404051a7223354a3f137e
-      internalID: -1760048111
+      spriteID: 4cf94a4021227484b8c33a7c1f2ac359
+      internalID: -1968999536
       vertices: []
       indices: 
       edges: []
@@ -1156,20 +1150,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_44
       rect:
         serializedVersion: 2
-        x: 956
-        y: 532
+        x: 400
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cfcde1582c9b4b059e30e00dafef2ba
-      internalID: -486988162
+      spriteID: 3a7f5f9fc5555c8499532867218ca73c
+      internalID: 1027792412
       vertices: []
       indices: 
       edges: []
@@ -1178,20 +1172,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_45
       rect:
         serializedVersion: 2
-        x: 60
-        y: 468
+        x: 464
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77520eb3b979a405d83c52bd8a87beb6
-      internalID: 335233425
+      spriteID: bed45ffa16aa993458b0c41ad7392d38
+      internalID: -398760598
       vertices: []
       indices: 
       edges: []
@@ -1200,20 +1194,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_46
       rect:
         serializedVersion: 2
-        x: 124
-        y: 468
+        x: 528
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8482f5a6aebb5436fa4ced815f3162da
-      internalID: 628546052
+      spriteID: 539ed48712b98504987c0e3cb551fbe8
+      internalID: -2077457314
       vertices: []
       indices: 
       edges: []
@@ -1222,2594 +1216,20 @@ TextureImporter:
       name: GC_14_PavlikVolodymyr_Aufgabe3_47
       rect:
         serializedVersion: 2
-        x: 188
-        y: 468
+        x: 592
+        y: 277
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 386dc88ff349549b9aba63cc4fd7458c
-      internalID: 1462373417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_48
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 01bcfaca8bd234be484baef1d01ce07f
-      internalID: 1100473937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_49
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86fd302ac54284040a9e554554d9a4f9
-      internalID: 1552060689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_50
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1461cb713cdcd403ea2625d24df60200
-      internalID: 932886764
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_51
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a75343280bf3490eafbea28b0d04ef2
-      internalID: -1347105144
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_52
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1f8a91131a1414bf19a98d5bb8497532
-      internalID: 167691730
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_53
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8d0723ae4da064170b57b552118519dc
-      internalID: -1966618099
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_54
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea3475e71dbc94beab4708758e84457b
-      internalID: -904199291
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_55
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d382a28faffc64207a16f502742fe5fb
-      internalID: 53397223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_56
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0038f4bc5c3d4a3a873e03052fbe014
-      internalID: 772851738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_57
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36d5ba79bc8db4f288351654bcf2c785
-      internalID: -795543153
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_58
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be3d0ef95fb85472b859ee3f647b42e6
-      internalID: 973841987
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_59
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 468
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 909a59a45050640719c4298488cfd71d
-      internalID: -623363035
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_60
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65878ac7fdb204674957241eb79abc69
-      internalID: 703982910
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_61
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46e9883a005f9422db788011f3d1549d
-      internalID: 593342426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_62
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f197f0491da14f4ebdc80a418f62f2f
-      internalID: -1673713094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_63
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e49c40e204c7b432aa7bcd8b74b0094d
-      internalID: 1609690819
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_64
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31c1d24299c98408786c29b8c8c2a7e0
-      internalID: 1799813201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_65
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5ccc18e715a14469bc59f61199d6725
-      internalID: -514215540
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_66
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12a7ec36b1e454e9684c125f79b528b6
-      internalID: -1601093809
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_67
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 380b38b33b8a14b4581884bd2754396a
-      internalID: 511115263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_68
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcbef29de3774410eadf17a450a762a5
-      internalID: -954338482
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_69
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e61be1c83d7844b20a59053dd7178a0b
-      internalID: 1102319312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_70
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8831d17654b77445ab614f10d7e28f24
-      internalID: -1080961366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_71
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b03345677cc284d579e689651103b990
-      internalID: -71930846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_72
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b051a2bae0524f0294f6cf426e3dbe8
-      internalID: -1807631882
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_73
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41b8baffc6c73430e9b7171e7d67d9ab
-      internalID: -778777335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_74
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 404
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8e7994ed4cad4521877d4ae4b0637b1
-      internalID: -738834542
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_75
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 58a932f928ed64b32b46c2cf407361fe
-      internalID: 1543195989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_76
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff43afe6e52d348a0a2efa18370677c2
-      internalID: -2027188570
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_77
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 74128719dcf8c4b6db8b0f88b3f88e52
-      internalID: -43635780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_78
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b302a437842114da7b659fae5b8326de
-      internalID: -739743111
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_79
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20cbf9a3a763542c58b30bbe65de9a90
-      internalID: -631432201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_80
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd4b51dd0bcd24a96bddd5a18c8fbb18
-      internalID: -2066555623
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_81
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f50081b1fdc14b9b8be08b9de78145d
-      internalID: 969991467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_82
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 06832f5d2d3344d40baed0c7f5b4b03c
-      internalID: -732737363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_83
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f83020f42bbe4cc088ae41034612a65
-      internalID: 1574215774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_84
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcd750a04027c46f3813ed1bfa501700
-      internalID: 993266391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_85
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b27bc6f9245c8470d915e5bc9b611afb
-      internalID: 500775869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_86
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2a2bf863471f44e0181be16d1678bdb6
-      internalID: 572147434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_87
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64b77d207329d4e86bee6ec07947200f
-      internalID: 1242266912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_88
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f9c15c8d06cf84399b31ffef8c6c83d8
-      internalID: -45517474
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_89
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 340
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 35dc49f8092654fa7ac6568dd6dcc07b
-      internalID: 507387201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_90
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95224b5f5236a4456bdd377b45666b4c
-      internalID: 1423522122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_91
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1158cb2401a9545f2bbe70332616fc77
-      internalID: 1482708989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_92
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a61e31e541ba494cb900f1120c33049
-      internalID: -417839499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_93
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2486cfb1d14a42b98d960de47d6b20b
-      internalID: 1818238729
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_94
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 572bc69bdab7f49b8ae186121b291ee3
-      internalID: -790485755
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_95
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 222d6ed37d740472295f64d2a87440e9
-      internalID: -184514347
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_96
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab5e4effcdef341bb9e194b575bc5cc6
-      internalID: 2117793342
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_97
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 96ac79bf385984f81ace5bafa5a59ba0
-      internalID: 1874311977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_98
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1efe95d78ebc1438d93c948390436083
-      internalID: -1905532251
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_99
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8723668f26e34fc3a9a31b3b6f341a6
-      internalID: 1663546889
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_100
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52dc1bbab795a48ac9142a0293a74f7f
-      internalID: -1636575409
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_101
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 626b20ab2a05e43aa93b0757512f7dd5
-      internalID: -1645735781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_102
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b057eb646268d45488a54351bfd68e8b
-      internalID: -1930974206
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_103
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bc8dac32b6e4344d58b77165d7b5dc56
-      internalID: 2060393056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_104
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 276
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ac32a8c6e73b4e3884980a170c283a8
-      internalID: -81511991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_105
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 264818ec9850b4840848262219641e07
-      internalID: -653733894
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_106
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18e98703fda2c447087ef4cf227b9f1a
-      internalID: 934924288
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_107
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7cbdf314c23542709ae1f8ecaa0f6b4
-      internalID: 379033977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_108
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fb3124d4d6bb428c828ba29a87cb7ad
-      internalID: -1258167689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_109
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d5a4d183852d84d38b446f4f30a026cd
-      internalID: -504660398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_110
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 501299bfe990d4a788e7362b9d6a9ebd
-      internalID: 1220467526
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_111
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e6b8f163a7f6467dbdea0b7b77ad110
-      internalID: 532130076
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_112
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: daa3651fbdf014b2c86abf2a5ec55fb2
-      internalID: 1825346891
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_113
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcf93d5f98765453190a85e04f46d305
-      internalID: -1437947901
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_114
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73d2d131cc529437cb24bf53f8654376
-      internalID: -1006762316
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_115
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b4090f947ce0e4a12ac99f87645da9f3
-      internalID: -551317628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_116
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c6755748465245c8b5329e3e119d49a
-      internalID: 1449392183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_117
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e35195f9dde1452d85ca65762332e14
-      internalID: -471018648
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_118
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7003ec920f5124357ac2750c70f9c71c
-      internalID: -88940945
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_119
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 212
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa014c60f7bd348b984166751804697e
-      internalID: -636372751
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_120
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c48940062682e47a6a684628457e4605
-      internalID: -1674802604
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_121
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f558c0fd4f87f4532b902b77aca98e44
-      internalID: -477452545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_122
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e09885d1b9264ccebefca45ab4ea1d2
-      internalID: -1160021911
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_123
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c73e36433708e47b1811ccd999ffc0e4
-      internalID: 1730193683
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_124
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21a1fbe3c4ca34318833a0df5624717d
-      internalID: 844005323
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_125
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8bdab885693f942508cd52bbcbda7ce7
-      internalID: 209794242
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_126
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0cdd56a22e4dd47c38750f8448f81308
-      internalID: -1604995359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_127
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86686a9fb611a463da49301a8bcb2539
-      internalID: 2100522586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_128
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb548752851534b06a16c8b73066c566
-      internalID: -665523719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_129
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 25d1037e5ea944c7c869352d56e1e455
-      internalID: 627030182
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_130
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3489965710609413c9871b5e660b2df3
-      internalID: 687364844
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_131
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ddd204227658b4d8f89f846a71270b42
-      internalID: -1832117086
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_132
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 42ae0da7d097c450a8103c2c1d820add
-      internalID: 1814445202
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_133
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e953fdbe196154db6bebe8cd524e8c89
-      internalID: -1513725092
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_134
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 148
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed50d7a73cc0a4d35b47336652d00f26
-      internalID: 971383873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_135
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0814cd2d644847858c3bc2dbbb0c2d4
-      internalID: -800913431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_136
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70f54c9c8c8914dd9bdcd918404f4ec7
-      internalID: -664862094
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_137
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46028d44bd19745e18e3d474a8cf2fc5
-      internalID: 1072791056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_138
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c5684f0802ad42399ba1d801c8e24d2
-      internalID: 866629693
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_139
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e692d8fbadb4444e87df356fd690af8
-      internalID: 798469461
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_140
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d15d2c9ce4f249729dcb7a5e299ceb9
-      internalID: 243118855
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_141
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7b7dbf7fdcd0f4daea1af8233e1c7ff4
-      internalID: 545784195
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_142
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dffdf89c593c447dd94cd1b7df638abc
-      internalID: -897929808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_143
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5562adf1add82433983f46e8e328e3a8
-      internalID: 783263728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_144
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2939192289e0e49c5949bce1e93baa15
-      internalID: -1402936243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_145
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2ad206217e3a3490c91a8c2efe52e583
-      internalID: 1145900174
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_146
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5d94606dfaa7a48bcb98535fcd7089da
-      internalID: 550303054
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_147
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d47c2b426963143e5be4e8be78803248
-      internalID: 1952159881
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_148
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d861bf28447434e548cd955379c777c8
-      internalID: -532543810
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_149
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 84
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 73e2863b780ad48df89d147f5a72c48e
-      internalID: 610309778
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_150
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4eb9f37a2f5a247dcb49255e321a0810
-      internalID: -1068519351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_151
-      rect:
-        serializedVersion: 2
-        x: 124
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90c6b4a1df54741609e93d193679b514
-      internalID: 2042325499
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_152
-      rect:
-        serializedVersion: 2
-        x: 188
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 13834f119056843e4a2c82c734fb64b4
-      internalID: 1543885955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_153
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2911ea22ece6a46f2b4f353c99a6daf7
-      internalID: 196013367
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_154
-      rect:
-        serializedVersion: 2
-        x: 316
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da317cc83c6f34751854b2980ced067f
-      internalID: -1299563545
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_155
-      rect:
-        serializedVersion: 2
-        x: 380
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d1a103d957bf4d73868ff9b0ead024a
-      internalID: -2023353999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_156
-      rect:
-        serializedVersion: 2
-        x: 444
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 608a0ffab120843bfb8455a4be0ef428
-      internalID: -861875075
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_157
-      rect:
-        serializedVersion: 2
-        x: 508
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7104cc980fdc84baa9868120f58fb114
-      internalID: -796580578
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_158
-      rect:
-        serializedVersion: 2
-        x: 572
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c5dd566603895484c8ac79d7dde5a388
-      internalID: 1502614589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_159
-      rect:
-        serializedVersion: 2
-        x: 636
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a7b74ad2b08f44f23b5e55778230dc5e
-      internalID: -1002527754
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_160
-      rect:
-        serializedVersion: 2
-        x: 700
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a31365a0dc76841269f0735ebbe9e45b
-      internalID: 1047808218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_161
-      rect:
-        serializedVersion: 2
-        x: 764
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0bba89fd51d6447e1804a2872044770c
-      internalID: -869948126
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_162
-      rect:
-        serializedVersion: 2
-        x: 828
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1389aab56534248ad873e338dbecfe09
-      internalID: 1178972039
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_163
-      rect:
-        serializedVersion: 2
-        x: 892
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 95910b478157549b8adf02b3dda040f8
-      internalID: 1353748032
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GC_14_PavlikVolodymyr_Aufgabe3_164
-      rect:
-        serializedVersion: 2
-        x: 956
-        y: 20
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51a5ad25e18dc4468a3de19539e7a6d1
-      internalID: -1427054724
+      spriteID: ea0838ff5e1930443aaa7633e714b6bc
+      internalID: 2050569562
       vertices: []
       indices: 
       edges: []
@@ -3830,169 +1250,52 @@ TextureImporter:
     nameFileIdTable:
       GC_14_PavlikVolodymyr_Aufgabe3_0: -5694134141735739486
       GC_14_PavlikVolodymyr_Aufgabe3_1: 4195648109097550244
-      GC_14_PavlikVolodymyr_Aufgabe3_10: 802526743
-      GC_14_PavlikVolodymyr_Aufgabe3_100: -1636575409
-      GC_14_PavlikVolodymyr_Aufgabe3_101: -1645735781
-      GC_14_PavlikVolodymyr_Aufgabe3_102: -1930974206
-      GC_14_PavlikVolodymyr_Aufgabe3_103: 2060393056
-      GC_14_PavlikVolodymyr_Aufgabe3_104: -81511991
-      GC_14_PavlikVolodymyr_Aufgabe3_105: -653733894
-      GC_14_PavlikVolodymyr_Aufgabe3_106: 934924288
-      GC_14_PavlikVolodymyr_Aufgabe3_107: 379033977
-      GC_14_PavlikVolodymyr_Aufgabe3_108: -1258167689
-      GC_14_PavlikVolodymyr_Aufgabe3_109: -504660398
-      GC_14_PavlikVolodymyr_Aufgabe3_11: -772834235
-      GC_14_PavlikVolodymyr_Aufgabe3_110: 1220467526
-      GC_14_PavlikVolodymyr_Aufgabe3_111: 532130076
-      GC_14_PavlikVolodymyr_Aufgabe3_112: 1825346891
-      GC_14_PavlikVolodymyr_Aufgabe3_113: -1437947901
-      GC_14_PavlikVolodymyr_Aufgabe3_114: -1006762316
-      GC_14_PavlikVolodymyr_Aufgabe3_115: -551317628
-      GC_14_PavlikVolodymyr_Aufgabe3_116: 1449392183
-      GC_14_PavlikVolodymyr_Aufgabe3_117: -471018648
-      GC_14_PavlikVolodymyr_Aufgabe3_118: -88940945
-      GC_14_PavlikVolodymyr_Aufgabe3_119: -636372751
-      GC_14_PavlikVolodymyr_Aufgabe3_12: 1086932235
-      GC_14_PavlikVolodymyr_Aufgabe3_120: -1674802604
-      GC_14_PavlikVolodymyr_Aufgabe3_121: -477452545
-      GC_14_PavlikVolodymyr_Aufgabe3_122: -1160021911
-      GC_14_PavlikVolodymyr_Aufgabe3_123: 1730193683
-      GC_14_PavlikVolodymyr_Aufgabe3_124: 844005323
-      GC_14_PavlikVolodymyr_Aufgabe3_125: 209794242
-      GC_14_PavlikVolodymyr_Aufgabe3_126: -1604995359
-      GC_14_PavlikVolodymyr_Aufgabe3_127: 2100522586
-      GC_14_PavlikVolodymyr_Aufgabe3_128: -665523719
-      GC_14_PavlikVolodymyr_Aufgabe3_129: 627030182
-      GC_14_PavlikVolodymyr_Aufgabe3_13: -1006568123
-      GC_14_PavlikVolodymyr_Aufgabe3_130: 687364844
-      GC_14_PavlikVolodymyr_Aufgabe3_131: -1832117086
-      GC_14_PavlikVolodymyr_Aufgabe3_132: 1814445202
-      GC_14_PavlikVolodymyr_Aufgabe3_133: -1513725092
-      GC_14_PavlikVolodymyr_Aufgabe3_134: 971383873
-      GC_14_PavlikVolodymyr_Aufgabe3_135: -800913431
-      GC_14_PavlikVolodymyr_Aufgabe3_136: -664862094
-      GC_14_PavlikVolodymyr_Aufgabe3_137: 1072791056
-      GC_14_PavlikVolodymyr_Aufgabe3_138: 866629693
-      GC_14_PavlikVolodymyr_Aufgabe3_139: 798469461
-      GC_14_PavlikVolodymyr_Aufgabe3_14: 32279713
-      GC_14_PavlikVolodymyr_Aufgabe3_140: 243118855
-      GC_14_PavlikVolodymyr_Aufgabe3_141: 545784195
-      GC_14_PavlikVolodymyr_Aufgabe3_142: -897929808
-      GC_14_PavlikVolodymyr_Aufgabe3_143: 783263728
-      GC_14_PavlikVolodymyr_Aufgabe3_144: -1402936243
-      GC_14_PavlikVolodymyr_Aufgabe3_145: 1145900174
-      GC_14_PavlikVolodymyr_Aufgabe3_146: 550303054
-      GC_14_PavlikVolodymyr_Aufgabe3_147: 1952159881
-      GC_14_PavlikVolodymyr_Aufgabe3_148: -532543810
-      GC_14_PavlikVolodymyr_Aufgabe3_149: 610309778
-      GC_14_PavlikVolodymyr_Aufgabe3_15: -681277151
-      GC_14_PavlikVolodymyr_Aufgabe3_150: -1068519351
-      GC_14_PavlikVolodymyr_Aufgabe3_151: 2042325499
-      GC_14_PavlikVolodymyr_Aufgabe3_152: 1543885955
-      GC_14_PavlikVolodymyr_Aufgabe3_153: 196013367
-      GC_14_PavlikVolodymyr_Aufgabe3_154: -1299563545
-      GC_14_PavlikVolodymyr_Aufgabe3_155: -2023353999
-      GC_14_PavlikVolodymyr_Aufgabe3_156: -861875075
-      GC_14_PavlikVolodymyr_Aufgabe3_157: -796580578
-      GC_14_PavlikVolodymyr_Aufgabe3_158: 1502614589
-      GC_14_PavlikVolodymyr_Aufgabe3_159: -1002527754
-      GC_14_PavlikVolodymyr_Aufgabe3_16: 1170819847
-      GC_14_PavlikVolodymyr_Aufgabe3_160: 1047808218
-      GC_14_PavlikVolodymyr_Aufgabe3_161: -869948126
-      GC_14_PavlikVolodymyr_Aufgabe3_162: 1178972039
-      GC_14_PavlikVolodymyr_Aufgabe3_163: 1353748032
-      GC_14_PavlikVolodymyr_Aufgabe3_164: -1427054724
-      GC_14_PavlikVolodymyr_Aufgabe3_17: 1240448471
-      GC_14_PavlikVolodymyr_Aufgabe3_18: 905380091
-      GC_14_PavlikVolodymyr_Aufgabe3_19: -921002064
+      GC_14_PavlikVolodymyr_Aufgabe3_10: -1340381730
+      GC_14_PavlikVolodymyr_Aufgabe3_11: 1547620440
+      GC_14_PavlikVolodymyr_Aufgabe3_12: -1245258542
+      GC_14_PavlikVolodymyr_Aufgabe3_13: 1493313293
+      GC_14_PavlikVolodymyr_Aufgabe3_14: 917830767
+      GC_14_PavlikVolodymyr_Aufgabe3_15: -310984262
+      GC_14_PavlikVolodymyr_Aufgabe3_16: 1471566926
+      GC_14_PavlikVolodymyr_Aufgabe3_17: -760333024
+      GC_14_PavlikVolodymyr_Aufgabe3_18: 904327556
+      GC_14_PavlikVolodymyr_Aufgabe3_19: -1508409651
       GC_14_PavlikVolodymyr_Aufgabe3_2: 1476718157774284973
-      GC_14_PavlikVolodymyr_Aufgabe3_20: -618231664
-      GC_14_PavlikVolodymyr_Aufgabe3_21: 187607333
-      GC_14_PavlikVolodymyr_Aufgabe3_22: 658656051
-      GC_14_PavlikVolodymyr_Aufgabe3_23: -2050171349
-      GC_14_PavlikVolodymyr_Aufgabe3_24: -79460066
-      GC_14_PavlikVolodymyr_Aufgabe3_25: -1384839347
-      GC_14_PavlikVolodymyr_Aufgabe3_26: 328790920
-      GC_14_PavlikVolodymyr_Aufgabe3_27: 1982509865
-      GC_14_PavlikVolodymyr_Aufgabe3_28: 389602723
-      GC_14_PavlikVolodymyr_Aufgabe3_29: -1691767942
+      GC_14_PavlikVolodymyr_Aufgabe3_20: 496824730
+      GC_14_PavlikVolodymyr_Aufgabe3_21: -1341026802
+      GC_14_PavlikVolodymyr_Aufgabe3_22: 24202579
+      GC_14_PavlikVolodymyr_Aufgabe3_23: 1070376164
+      GC_14_PavlikVolodymyr_Aufgabe3_24: 723316732
+      GC_14_PavlikVolodymyr_Aufgabe3_25: 477705575
+      GC_14_PavlikVolodymyr_Aufgabe3_26: 105330780
+      GC_14_PavlikVolodymyr_Aufgabe3_27: 1117043840
+      GC_14_PavlikVolodymyr_Aufgabe3_28: 1396785493
+      GC_14_PavlikVolodymyr_Aufgabe3_29: 109067546
       GC_14_PavlikVolodymyr_Aufgabe3_3: -1779914714336380384
-      GC_14_PavlikVolodymyr_Aufgabe3_30: 1859361673
-      GC_14_PavlikVolodymyr_Aufgabe3_31: 394172062
-      GC_14_PavlikVolodymyr_Aufgabe3_32: -1317977937
-      GC_14_PavlikVolodymyr_Aufgabe3_33: -84616097
-      GC_14_PavlikVolodymyr_Aufgabe3_34: 448801223
-      GC_14_PavlikVolodymyr_Aufgabe3_35: -2129660425
-      GC_14_PavlikVolodymyr_Aufgabe3_36: 868911243
-      GC_14_PavlikVolodymyr_Aufgabe3_37: 229068110
-      GC_14_PavlikVolodymyr_Aufgabe3_38: -1412720342
-      GC_14_PavlikVolodymyr_Aufgabe3_39: 138454199
+      GC_14_PavlikVolodymyr_Aufgabe3_30: -1178496399
+      GC_14_PavlikVolodymyr_Aufgabe3_31: -620425451
+      GC_14_PavlikVolodymyr_Aufgabe3_32: -440766288
+      GC_14_PavlikVolodymyr_Aufgabe3_33: 1494455373
+      GC_14_PavlikVolodymyr_Aufgabe3_34: -1485178213
+      GC_14_PavlikVolodymyr_Aufgabe3_35: -800870694
+      GC_14_PavlikVolodymyr_Aufgabe3_36: -654870802
+      GC_14_PavlikVolodymyr_Aufgabe3_37: 474879958
+      GC_14_PavlikVolodymyr_Aufgabe3_38: -616204965
+      GC_14_PavlikVolodymyr_Aufgabe3_39: 8675168
       GC_14_PavlikVolodymyr_Aufgabe3_4: -1015838286484704588
-      GC_14_PavlikVolodymyr_Aufgabe3_40: 1624925386
-      GC_14_PavlikVolodymyr_Aufgabe3_41: -1709769284
-      GC_14_PavlikVolodymyr_Aufgabe3_42: -1057911087
-      GC_14_PavlikVolodymyr_Aufgabe3_43: -1760048111
-      GC_14_PavlikVolodymyr_Aufgabe3_44: -486988162
-      GC_14_PavlikVolodymyr_Aufgabe3_45: 335233425
-      GC_14_PavlikVolodymyr_Aufgabe3_46: 628546052
-      GC_14_PavlikVolodymyr_Aufgabe3_47: 1462373417
-      GC_14_PavlikVolodymyr_Aufgabe3_48: 1100473937
-      GC_14_PavlikVolodymyr_Aufgabe3_49: 1552060689
+      GC_14_PavlikVolodymyr_Aufgabe3_40: 431132814
+      GC_14_PavlikVolodymyr_Aufgabe3_41: -1706416087
+      GC_14_PavlikVolodymyr_Aufgabe3_42: 1809995852
+      GC_14_PavlikVolodymyr_Aufgabe3_43: -1968999536
+      GC_14_PavlikVolodymyr_Aufgabe3_44: 1027792412
+      GC_14_PavlikVolodymyr_Aufgabe3_45: -398760598
+      GC_14_PavlikVolodymyr_Aufgabe3_46: -2077457314
+      GC_14_PavlikVolodymyr_Aufgabe3_47: 2050569562
       GC_14_PavlikVolodymyr_Aufgabe3_5: -6061849162530570989
-      GC_14_PavlikVolodymyr_Aufgabe3_50: 932886764
-      GC_14_PavlikVolodymyr_Aufgabe3_51: -1347105144
-      GC_14_PavlikVolodymyr_Aufgabe3_52: 167691730
-      GC_14_PavlikVolodymyr_Aufgabe3_53: -1966618099
-      GC_14_PavlikVolodymyr_Aufgabe3_54: -904199291
-      GC_14_PavlikVolodymyr_Aufgabe3_55: 53397223
-      GC_14_PavlikVolodymyr_Aufgabe3_56: 772851738
-      GC_14_PavlikVolodymyr_Aufgabe3_57: -795543153
-      GC_14_PavlikVolodymyr_Aufgabe3_58: 973841987
-      GC_14_PavlikVolodymyr_Aufgabe3_59: -623363035
       GC_14_PavlikVolodymyr_Aufgabe3_6: -7486216250596894939
-      GC_14_PavlikVolodymyr_Aufgabe3_60: 703982910
-      GC_14_PavlikVolodymyr_Aufgabe3_61: 593342426
-      GC_14_PavlikVolodymyr_Aufgabe3_62: -1673713094
-      GC_14_PavlikVolodymyr_Aufgabe3_63: 1609690819
-      GC_14_PavlikVolodymyr_Aufgabe3_64: 1799813201
-      GC_14_PavlikVolodymyr_Aufgabe3_65: -514215540
-      GC_14_PavlikVolodymyr_Aufgabe3_66: -1601093809
-      GC_14_PavlikVolodymyr_Aufgabe3_67: 511115263
-      GC_14_PavlikVolodymyr_Aufgabe3_68: -954338482
-      GC_14_PavlikVolodymyr_Aufgabe3_69: 1102319312
       GC_14_PavlikVolodymyr_Aufgabe3_7: -8799918311871863034
-      GC_14_PavlikVolodymyr_Aufgabe3_70: -1080961366
-      GC_14_PavlikVolodymyr_Aufgabe3_71: -71930846
-      GC_14_PavlikVolodymyr_Aufgabe3_72: -1807631882
-      GC_14_PavlikVolodymyr_Aufgabe3_73: -778777335
-      GC_14_PavlikVolodymyr_Aufgabe3_74: -738834542
-      GC_14_PavlikVolodymyr_Aufgabe3_75: 1543195989
-      GC_14_PavlikVolodymyr_Aufgabe3_76: -2027188570
-      GC_14_PavlikVolodymyr_Aufgabe3_77: -43635780
-      GC_14_PavlikVolodymyr_Aufgabe3_78: -739743111
-      GC_14_PavlikVolodymyr_Aufgabe3_79: -631432201
-      GC_14_PavlikVolodymyr_Aufgabe3_8: 2070038950
-      GC_14_PavlikVolodymyr_Aufgabe3_80: -2066555623
-      GC_14_PavlikVolodymyr_Aufgabe3_81: 969991467
-      GC_14_PavlikVolodymyr_Aufgabe3_82: -732737363
-      GC_14_PavlikVolodymyr_Aufgabe3_83: 1574215774
-      GC_14_PavlikVolodymyr_Aufgabe3_84: 993266391
-      GC_14_PavlikVolodymyr_Aufgabe3_85: 500775869
-      GC_14_PavlikVolodymyr_Aufgabe3_86: 572147434
-      GC_14_PavlikVolodymyr_Aufgabe3_87: 1242266912
-      GC_14_PavlikVolodymyr_Aufgabe3_88: -45517474
-      GC_14_PavlikVolodymyr_Aufgabe3_89: 507387201
-      GC_14_PavlikVolodymyr_Aufgabe3_9: 121754319
-      GC_14_PavlikVolodymyr_Aufgabe3_90: 1423522122
-      GC_14_PavlikVolodymyr_Aufgabe3_91: 1482708989
-      GC_14_PavlikVolodymyr_Aufgabe3_92: -417839499
-      GC_14_PavlikVolodymyr_Aufgabe3_93: 1818238729
-      GC_14_PavlikVolodymyr_Aufgabe3_94: -790485755
-      GC_14_PavlikVolodymyr_Aufgabe3_95: -184514347
-      GC_14_PavlikVolodymyr_Aufgabe3_96: 2117793342
-      GC_14_PavlikVolodymyr_Aufgabe3_97: 1874311977
-      GC_14_PavlikVolodymyr_Aufgabe3_98: -1905532251
-      GC_14_PavlikVolodymyr_Aufgabe3_99: 1663546889
+      GC_14_PavlikVolodymyr_Aufgabe3_8: -939059596
+      GC_14_PavlikVolodymyr_Aufgabe3_9: -1237849089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

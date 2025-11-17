@@ -27,7 +27,6 @@ namespace ___WorkData.Scripts.Player
 
         [SerializeField] private float walkingSpeed = 5f;  // Швидкість горизонтального руху при звичайній ході.
         [SerializeField] private float jumpSpeed = 5f;     // Вертикальна швидкість при стрибку.
-        [SerializeField] private float rollSpeed = 5f;     // Горизонтальна швидкість при перекаті.
         
         // Посилання на Animator, який керує анімаціями персонажа.
         // Якщо не призначити його в Inspector, у Awake() ми спробуємо знайти компонент автоматично.
@@ -48,7 +47,7 @@ namespace ___WorkData.Scripts.Player
         // _rollAction — за перекат.
         private InputAction _moveAction;
         private InputAction _jumpAction;
-        private InputAction _rollAction;
+        private InputAction _attackAction;
 
         // Тут зберігається останнє прочитане значення руху з Input System.
         // Move зазвичай повертає (-1,0) / (1,0) або будь-яке число між ними для X.
@@ -65,7 +64,7 @@ namespace ___WorkData.Scripts.Player
         // false → ліворуч.
         // На основі цього прапорця UpdateRotation обертає персонажа.
         private bool _lookingToTheRight = true;
-        
+
         #endregion
         
         #region Unity Event Functions
@@ -87,7 +86,7 @@ namespace ___WorkData.Scripts.Player
             //    Тепер _moveAction, _jumpAction, _rollAction знають, на які клавіші/стік вони прив’язані.
             _moveAction = _inputActions.Player.Move;
             _jumpAction = _inputActions.Player.Jump;
-            _rollAction = _inputActions.Player.Roll;
+            _attackAction = _inputActions.Player.Attack;
 
             // 3) Отримуємо посилання на Rigidbody2D на цьому ж GameObject.
             //    Без цього _rb буде null, і при зверненні до _rb.linearVelocity буде помилка.
@@ -118,7 +117,7 @@ namespace ___WorkData.Scripts.Player
 
             // Підписка на перекат:
             // коли дія Roll спрацьовує — викликається OnRoll.
-            _rollAction.performed += OnRoll;
+            _attackAction.performed += Attack;
         }
         
         // FixedUpdate() — спеціальний метод для фізики.
@@ -142,6 +141,7 @@ namespace ___WorkData.Scripts.Player
             // _moveInput оновлюється в методі Move(), який викликається через події InputAction.
             // Якщо Move() ніколи не викличеться (немає вводу / не підписався в OnEnable),
             // то _moveInput залишиться (0,0), і гравець не рухатиметься.
+            
         }
         
         private void OnDisable()
@@ -151,7 +151,7 @@ namespace ___WorkData.Scripts.Player
             _moveAction.performed -= Move;
             _moveAction.canceled  -= Move;
             _jumpAction.performed -= OnJump;
-            _rollAction.performed -= OnRoll;
+            _attackAction.performed -= Attack;
 
             // Вимикаємо InputSystem для охайности.
             _inputActions.Disable();
@@ -190,7 +190,7 @@ namespace ___WorkData.Scripts.Player
             UpdateRotation();
 
         }
-
+        
         // Цей метод фізично змінює поворот гравця в сцені.
         // Він дивиться на _lookingToTheRight і відповідно встановлює rotation:
         // (0, 0, 0)   — "дивимось" праворуч,
@@ -226,29 +226,15 @@ namespace ___WorkData.Scripts.Player
             // Тут немає перевірки, чи гравець стоїть на землі —
             // отже стрибок можливий і в повітрі (множинні стрибки).
         }
-        
+
+        private void Attack(InputAction.CallbackContext ctx)
+        {
+            animator.SetTrigger("ActionTrigger");
+            animator.SetInteger("ActionID", 9);
+        }
+
         // Обробка перекату.
         // Викликається, коли дія Roll надсилає performed.
-        private void OnRoll(InputAction.CallbackContext ctx)
-        {
-            // Знову ж таки — реагуємо тільки на "performed", а не на інші стани.
-            if (!ctx.performed) return;
-
-            // Визначаємо напрямок перекату: знак від _moveInput.x.
-            // Якщо ти тиснеш праворуч → _moveInput.x > 0 → direction = +1.
-            // Якщо ліворуч   → _moveInput.x < 0 → direction = -1.
-            // Якщо X == 0, Mathf.Sign поверне 0, і перекат фактично не відбудеться.
-            float direction = Mathf.Sign(_moveInput.x);
-
-            // Задаємо горизонтальну швидкість перекату:
-            // X = direction * rollSpeed  → ривок уліво/вправо,
-            // Y залишаємо як є (щоб не зламати стрибок/падіння).
-            _rb.linearVelocity = new Vector2(direction * rollSpeed, _rb.linearVelocity.y);
-
-            // ВАЖЛИВО:
-            // Тут немає таймера перекату або блокування керування.
-            // Це одноразовий ривок: ти задав швидкість, далі фізика сама гальмує/рухає.
-        }
         #endregion
         
     }
