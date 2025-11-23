@@ -28360,7 +28360,7 @@ GameObject:
   - component: {fileID: 1345674346}
   - component: {fileID: 1345674350}
   m_Layer: 0
-  m_Name: Camera
+  m_Name: "\U0001F4F7 Camera"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28453,7 +28453,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -28478,7 +28478,7 @@ Transform:
   m_GameObject: {fileID: 1345674345}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 0.5, z: -11.04}
+  m_LocalPosition: {x: -4.65, y: 0.78, z: -11.04}
   m_LocalScale: {x: 2.6375, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28531,7 +28531,7 @@ GameObject:
   - component: {fileID: 1365872565}
   - component: {fileID: 1365872568}
   m_Layer: 0
-  m_Name: Warrior
+  m_Name: "\U0001FAC5 Warrior"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28601,10 +28601,11 @@ Transform:
   m_GameObject: {fileID: 1365872562}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 0.5, z: -1.04}
+  m_LocalPosition: {x: -4.65, y: 0.78, z: -1.04}
   m_LocalScale: {x: 1.0516356, y: 1.0516356, z: 1.0516356}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1972726067}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1365872565
@@ -28616,13 +28617,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1365872562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0318b24e2c308af4eaf7b04eb534604f, type: 3}
+  m_Script: {fileID: 11500000, guid: f65bfb3056d5a499db7c4151e3671f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkingSpeed: 5
-  jumpSpeed: 5
-  doubleClickTime: 0.25
-  animator: {fileID: 1365872568}
+  walkingSpeed: 10
+  jumpForce: 5
+  clickCount: 0
+  clickTimer: 0
+  doubleClickTime: 0.1
+  animator: {fileID: 0}
+  wallcheck: {fileID: 0}
+  groundcheck: {fileID: 0}
+  groundlayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!70 &1365872566
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -28675,7 +28683,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -35186,6 +35194,37 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1638834344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638834345}
+  m_Layer: 0
+  m_Name: PlayerSprite
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1638834345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638834344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1972726067}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1876280650
 GameObject:
   m_ObjectHideFlags: 0
@@ -35199,7 +35238,7 @@ GameObject:
   - component: {fileID: 1876280654}
   - component: {fileID: 1876280655}
   m_Layer: 0
-  m_Name: CinemachineCamera
+  m_Name: "\U0001F3A5 CinemachineCamera"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35230,7 +35269,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 60
-    OrthographicSize: 6
+    OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -35257,7 +35296,7 @@ Transform:
   m_GameObject: {fileID: 1876280650}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.8, y: 0.5, z: -11.04}
+  m_LocalPosition: {x: -4.65, y: 0.78, z: -11.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36500,6 +36539,38 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1972726066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972726067}
+  m_Layer: 0
+  m_Name: Visual Root
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1972726067
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972726066}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1638834345}
+  m_Father: {fileID: 1365872564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
