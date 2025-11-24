@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &71872393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 71872394}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &71872394
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71872393}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1365872564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &112008971
 GameObject:
   m_ObjectHideFlags: 0
@@ -6687,6 +6718,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &600705676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600705677}
+  m_Layer: 0
+  m_Name: Groundcheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600705677
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600705676}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.1, y: -1.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1365872564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &607328001
 GameObject:
   m_ObjectHideFlags: 0
@@ -6699,7 +6761,7 @@ GameObject:
   - component: {fileID: 607328004}
   - component: {fileID: 607328003}
   - component: {fileID: 607328005}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22103,7 +22165,7 @@ GameObject:
   - component: {fileID: 1156731920}
   - component: {fileID: 1156731919}
   - component: {fileID: 1156731921}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28606,6 +28668,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1972726067}
+  - {fileID: 600705677}
+  - {fileID: 71872394}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1365872565
@@ -28620,17 +28684,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65bfb3056d5a499db7c4151e3671f51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovementState: 0
+  playerActionState: 0
+  facingDirection: 0
   walkingSpeed: 10
   jumpForce: 5
   clickCount: 0
   clickTimer: 0
   doubleClickTime: 0.1
-  animator: {fileID: 0}
-  wallcheck: {fileID: 0}
-  groundcheck: {fileID: 0}
+  animator: {fileID: 1365872568}
+  wallcheck: {fileID: 71872394}
+  groundcheck: {fileID: 600705677}
   groundlayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
+  Grounded: 0
 --- !u!70 &1365872566
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -35353,7 +35421,7 @@ GameObject:
   - component: {fileID: 1882663166}
   - component: {fileID: 1882663165}
   - component: {fileID: 1882663167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Floor 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

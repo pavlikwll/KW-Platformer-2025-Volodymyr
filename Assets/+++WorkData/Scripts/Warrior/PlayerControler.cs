@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,15 +10,23 @@ namespace ___WorkData.Scripts.Player
     public class PlayerController : MonoBehaviour
     {
         #region ENUMS
+        
+        public enum PlayerActionState { Default, Attack, Attack_Dash }
+       
         public enum PlayerMovementState { Idle, Run, Jump }
-        public enum PlayerActionState { Attack, Attack_Dash }
+        public enum FacingDirection { Left, Right }
+        [Header("Enum")] 
+        public PlayerMovementState playerMovementState; 
+        public PlayerActionState playerActionState;
+        public FacingDirection facingDirection;
+        
         #endregion
         
         #region ANIMATOR HASHES
         public static readonly int Hash_MovementValue = Animator.StringToHash("MovementValue");
-        public static readonly int Hash_ActionID      = Animator.StringToHash("ActionID");
+        public static readonly int Hash_ActionID = Animator.StringToHash("ActionID");
         public static readonly int Hash_ActionTrigger = Animator.StringToHash("ActionTrigger");
-        public static readonly int Hash_Grounded      = Animator.StringToHash("Grounded");
+        public static readonly int Hash_Grounded = Animator.StringToHash("Grounded");
         #endregion
         
         #region INSPECTOR VARIABLES
@@ -46,6 +55,10 @@ namespace ___WorkData.Scripts.Player
         #endregion
         
         #region INPUT SYSTEM VARIABLES
+        private void InputStuff()
+        {
+            
+        }
         private InputSystem_Actions inputActions;
 
         private InputAction moveAction;
@@ -54,6 +67,7 @@ namespace ___WorkData.Scripts.Player
 
         private Vector2 moveInput;
         private bool lookingToTheRight = true;
+        
         #endregion
         
         #region CACHED COMPONENTS
@@ -61,7 +75,7 @@ namespace ___WorkData.Scripts.Player
         #endregion
         
         #region UNITY LIFECYCLE
-
+        
         // ПРИЧИНА:
         //   Налаштовуємо систему вводу та беремо компоненти Unity.
         // МЕХАНІКА:
@@ -72,12 +86,23 @@ namespace ___WorkData.Scripts.Player
         {
             inputActions = new InputSystem_Actions();
 
+            playerActionState = PlayerActionState.Default;
+
             moveAction = inputActions.Player.Move;
             jumpAction = inputActions.Player.Jump;
             attackAction = inputActions.Player.Attack;
 
             rb = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
+            
+            if (facingDirection == FacingDirection.Right)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
         }
 
         // ПРИЧИНА:
@@ -106,6 +131,8 @@ namespace ___WorkData.Scripts.Player
         //   Персонаж рухається, робить комбо, чіпляється за край.
         private void FixedUpdate()
         {
+            Grounded = Physics2D.Raycast(groundcheck.position, Vector2.down, 0.2f, groundlayer);
+            
             HandleMovement();
             HandleComboTimer();
             HandleLedgeGrab();
@@ -175,7 +202,7 @@ namespace ___WorkData.Scripts.Player
         {
             direction = lookingToTheRight ? Vector2.right : Vector2.left;
 
-            Grounded = Physics2D.Raycast(groundcheck.position, Vector2.down, 0.2f, groundlayer);
+            
             bool TouchingWall = Physics2D.Raycast(wallcheck.position, direction, 0.2f, groundlayer);
 
             // Вхід у хват
@@ -240,7 +267,7 @@ namespace ___WorkData.Scripts.Player
         
         #region INPUT CALLBACKS
 
-        // 🔵 РУХ (Move)
+        // РУХ (Move)
         // ПРИЧИНА:
         //   Коли гравець натискає A/D або ←/→ — ми маємо прочитати це значення.
         //
@@ -267,10 +294,27 @@ namespace ___WorkData.Scripts.Player
                 lookingToTheRight = false;
             }
 
-            UpdateRotation();
+            if (moveInput.x == 0)
+            {
+                playerMovementState = PlayerMovementState.Idle;
+            }
+            else
+            {
+                playerMovementState = PlayerMovementState.Run;
+            }
+
+            if (moveInput.x > 0f)
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                facingDirection = FacingDirection.Right;
+            }
+            else if(moveInput.x < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+                facingDirection = FacingDirection.Left;
+            }
         }
-
-
+        
         // СТРИБОК (Jump)
         // ПРИЧИНА:
         //   Гравець повинен мати вертикальний рух угору.
@@ -287,7 +331,7 @@ namespace ___WorkData.Scripts.Player
         private void OnJump(InputAction.CallbackContext ctx)
         {
             if (!ctx.performed) return;
-            if (Grounded) return;
+            if (!Grounded) return;
 
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
 
@@ -317,6 +361,11 @@ namespace ___WorkData.Scripts.Player
         {
             if (!ctx.performed) return;
 
+            if (playerActionState == PlayerActionState.Attack)
+            {
+                return;
+            }
+            
             clickCount = clickCount + 1;
 
             if (clickCount == 1)
@@ -351,7 +400,7 @@ namespace ___WorkData.Scripts.Player
         }
 
 
-        // 🔵 ПОВОРОТ ПЕРСОНАЖА
+        // ПОВОРОТ ПЕРСОНАЖА
         // ПРИЧИНА:
         //   Анімації повинні дивитися у сторону руху.
         //
@@ -362,14 +411,7 @@ namespace ___WorkData.Scripts.Player
         //   Персонаж завжди “дивиться” у правильний бік.
         private void UpdateRotation()
         {
-            if (lookingToTheRight)
-            {
-                transform.rotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
-            {
-                transform.rotation = Quaternion.Euler(0, 180, 0);
-            }
+            
         }
 
         #endregion
