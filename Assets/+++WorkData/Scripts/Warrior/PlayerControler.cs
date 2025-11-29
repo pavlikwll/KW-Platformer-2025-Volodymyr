@@ -33,6 +33,7 @@ namespace ___WorkData.Scripts.Player
 
         [Header("Movement")]
         [SerializeField] private float walkingSpeed = 10f;
+        [SerializeField] private float maxHorizontalVelocity = 12f;
         [SerializeField] private float jumpForce = 5f;
 
         [Header("Combo System")]
@@ -131,11 +132,16 @@ namespace ___WorkData.Scripts.Player
         //   Персонаж рухається, робить комбо, чіпляється за край.
         private void FixedUpdate()
         {
+
+            if (playerActionState == PlayerActionState.Default)
+                rb.linearVelocityX = moveInput.x * walkingSpeed;
+            
             Grounded = Physics2D.Raycast(groundcheck.position, Vector2.down, 0.2f, groundlayer);
             
             HandleMovement();
             HandleComboTimer();
             HandleLedgeGrab();
+            CheckRigidBodyHorizontalVelocity();
         }
 
         // Вимикаємо всі підписки, щоб уникнути помилок
@@ -150,6 +156,14 @@ namespace ___WorkData.Scripts.Player
         }
 
         #endregion
+
+        private void CheckRigidBodyHorizontalVelocity()
+        {
+            if (Math.Abs(rb.linearVelocityX) > maxHorizontalVelocity)
+            {
+                rb.linearVelocityX = maxHorizontalVelocity * (facingDirection == FacingDirection.Left ? -1 : 1);
+            }
+        }
         
         #region MOVEMENT LOGIC
 
@@ -360,14 +374,13 @@ namespace ___WorkData.Scripts.Player
         private void Attack(InputAction.CallbackContext ctx)
         {
             if (!ctx.performed) return;
+            if (playerActionState == PlayerActionState.Attack) return; // блок спаму
 
-            if (playerActionState == PlayerActionState.Attack)
-            {
-                return;
-            }
-            
-            clickCount = clickCount + 1;
+            playerActionState = PlayerActionState.Attack; // увімкнув блок
+    
 
+            clickCount++;
+    
             if (clickCount == 1)
             {
                 animator.SetTrigger(Hash_ActionTrigger);
@@ -381,6 +394,11 @@ namespace ___WorkData.Scripts.Player
                 clickTimer = 0;
                 clickCount = 0;
             }
+        }
+        
+        public void EndAttack()
+        {
+            playerActionState = PlayerActionState.Default;
         }
 
         #endregion
